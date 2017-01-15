@@ -1,4 +1,7 @@
-angular.module('filterer', ['filterer.input'])
+angular.module('filterer', [
+  'filterer.input',
+  'ngRoute'
+  ])
 .config (function ($routeProvider) {
   $routeProvider
     .when('/', {
