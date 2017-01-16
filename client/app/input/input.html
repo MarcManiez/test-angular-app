@@ -1,8 +1,9 @@
-<form action="/input" method="POST">
+<form ng-submit="submit()">
+  <!-- Add required attribute when done testing, and show some error messaging with angular -->
   <label for="name">Name</label>
   <input type="text" name="name" id="name" ng-model="user.name" autofocus>
-  <label for="name">Birthday</label>
-  <select name="month" ng-model="user.month">
+  <label for="DOB">Birthday</label>
+  <select name="month" id="DOB" ng-model="user.month">
     <option disabled selected value>Month</option>
     <option value="January">January</option>
     <option value="Febuary">Febuary</option>
@@ -127,6 +128,6 @@
     <option value="1948">1948</option>
     <option value="1947">1947</option>
   </select>
-
+  <input type="submit">
 </form>
 <pre>{{user}}</pre>
