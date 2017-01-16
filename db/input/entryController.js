@@ -16,6 +16,12 @@ module.exports = {
       } else {
         console.log('saved:', data);
       }
+    })
+    .then(newEntry => {
+      res.status(201).json(newEntry);
+    })
+    .catch(err => {
+      next(err);
     }); 
   }
 };
