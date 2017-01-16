@@ -1,11 +1,12 @@
 const Entry = require('./entryModel');
-const db = require('../db/input/entryModel');
+const db = require('../../server/server');
 
 module.exports = { 
   newLink: function (req, res, next) {
+    console.log('WE MADE IT!!?!');
     const dob = new Date(req.body.year, req.body.month, req.body.day);
     const entry = new Entry({
-      name: req.body,
+      name: req.body.name,
       dob: dob
     });
     entry.save( (err, data) => {
@@ -14,7 +15,6 @@ module.exports = {
       } else {
         console.log('saved:', data);
       }
-    });
-    
+    }); 
   }
 };

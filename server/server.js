@@ -3,6 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+const entryController = require('../db/input/entryController');
+
 mongoose.connect('mongodb://localhost/testDB');
  
 var db = mongoose.connection;
@@ -23,8 +25,6 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/../client'));
 
-app.post('/input', (req, res) => {
-  console.log(req.body);
-});
+app.post('/input', entryController.newLink);
 
 module.exports = db;
