@@ -26,3 +26,5 @@ app.use(express.static(__dirname + '/../client'));
 app.post('/input', (req, res) => {
   console.log(req.body);
 });
+
+module.exports = db;
