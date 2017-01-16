@@ -7,4 +7,7 @@ angular.module('filterer.input', [])
     day: '',
     year: ''
   }
+  $scope.submit = function () {
+    console.log('HEYA I AM WORKING!');
+  }
 });
