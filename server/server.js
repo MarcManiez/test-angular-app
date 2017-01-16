@@ -12,4 +12,6 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/../client'));
 
-console.log(__dirname);
+app.post('/input', (req, res) => {
+  console.log(req.body);
+});
