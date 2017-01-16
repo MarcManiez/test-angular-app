@@ -1,8 +1,9 @@
 angular.module('filterer', [
   'filterer.input',
+  'filterer.services',
   'ngRoute'
   ])
-.config (function ($routeProvider) {
+.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'app/input/input.html',

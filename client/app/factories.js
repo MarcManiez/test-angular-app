@@ -1,6 +1,6 @@
 angular.module('filterer.services', [])
 
-.factory('requests', $http => {
+.factory('Requests', $http => {
   const postEntry = (entry) => {
     return $http({
       method: 'POST',
@@ -8,7 +8,11 @@ angular.module('filterer.services', [])
       data: entry
     })
     .then(res => {
-      return resp.data;
+      return res.data;
     });
-  }
+  };
+
+  return {
+    postEntry: postEntry
+  };
 });

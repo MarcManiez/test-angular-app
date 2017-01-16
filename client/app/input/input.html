@@ -1,9 +1,10 @@
-<form ng-submit="submit()">
-  <!-- Add required attribute when done testing, and show some error messaging with angular -->
+<form ng-submit="submit(entry)">
+  <!-- TODO: Add required attribute when done testing -->
+  <!-- TODO: Add some CSS -->
   <label for="name">Name</label>
-  <input type="text" name="name" id="name" ng-model="user.name" autofocus>
+  <input type="text" name="name" id="name" ng-model="entry.name" autofocus>
   <label for="DOB">Birthday</label>
-  <select name="month" id="DOB" ng-model="user.month">
+  <select name="month" id="DOB" ng-model="entry.month">
     <option disabled selected value>Month</option>
     <option value="January">January</option>
     <option value="Febuary">Febuary</option>
@@ -19,7 +20,7 @@
     <option value="December">December</option>
   </select>
 
-  <select name="day" ng-model="user.day">
+  <select name="day" ng-model="entry.day">
     <option disabled selected value>Day</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -54,7 +55,7 @@
     <option value="31">31</option>
   </select>
 
-  <select name="year" ng-model="user.year">
+  <select name="year" ng-model="entry.year">
     <option disabled selected value>Year</option>
     <option value="2017">2017</option>
     <option value="2016">2016</option>
@@ -130,4 +131,4 @@
   </select>
   <input type="submit">
 </form>
-<pre>{{user}}</pre>
+<pre>{{entry}}</pre>
